@@ -1,0 +1,22 @@
+.bottom_bar {
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(53, 48, 48);
+    display: flex;
+    justify-content: center;
+}
+
+.bottom_bar .card_container {
+    margin: 10px;
+}
+
+@media (max-width: 640px) {
+    .bottom_bar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .bottom_bar .card_container {
+        width: 6rem;
+    }
+}

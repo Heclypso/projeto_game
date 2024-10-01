@@ -1,0 +1,170 @@
+.card_field {
+    margin: 50px 300px 50px 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr 1fr;
+    column-gap: 15rem;
+    row-gap: 5rem;
+}
+
+.card_container {
+    width: 280px;
+}
+
+.card_title {
+    padding: 4px;
+    width: 60%;
+    text-align: center;
+    background-color: #D9D9D9;
+    color: #030303;
+}
+
+.card_red_hp {
+    z-index: 1;
+    background-color: red;
+}
+
+.card_green_hp {
+    z-index: 2;
+    width: 100%;
+    background-color: #23CC64;
+}
+
+.card_hp_points {
+    z-index: 3;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.card_header {
+    padding: 10px;
+    display: flex;
+    font-size: 28px;
+    background-color: #494949;
+    color: white;
+}
+
+.card_header--ultimate {
+    background-color: #ffffff;
+    color: black;
+    background: linear-gradient(-45deg, #eeeb52, #bb0000, #ecfd00, #eb7d00);
+	background-size: 400% 400%;
+	animation: ultimate 15s ease infinite;
+}
+
+.card_header p {
+    margin: 10px;
+}
+
+.card_header img {
+    width: 40px;
+}
+
+.card_body {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card_display img {
+    width: 100%;
+    display: none;
+}
+
+.card_container:hover .card_display img {
+    display: block;
+}
+
+.card_footer {
+    background-color: #414141;
+    display: flex;
+}
+
+.card_footer--ultimate {
+    background-color: #e6e6e6;
+}
+
+.card_footer_damage {
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    width: 50%;
+}
+
+.card_footer_armor {
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    width: 50%;
+}
+
+.card_description {
+    padding: 15px;
+    color: white;
+}
+
+.card_description--ultimate {
+    color: #272727;
+}
+
+@keyframes ultimate {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 640px) {
+    .card_field {
+        margin: 2.5rem;
+        column-gap: 4rem;
+        row-gap: 2rem;
+    }
+
+    .card_container {
+        width: 100%;
+    }
+
+    .card_title {
+        padding: 4px;
+        width: 60%;
+        font-size: 8px;
+    }
+
+    .card_header {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .card_hp_points {
+        font-size: 15px;
+    }
+    
+
+    .card_header img {
+        width: 30px;
+    }
+
+    .card_footer_damage {
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .card_footer_armor {
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .card_description {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+
+}
