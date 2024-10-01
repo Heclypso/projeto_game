@@ -1,9 +1,8 @@
 .card_field {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row: 1fr 1fr 1fr;
-    column-gap: 59rem;
-    transform: scale(0.6);
+    column-gap: 90rem;
+    transform: scale(0.8);
 }
 
 .card_container {
@@ -13,7 +12,6 @@
 .card_field .card_container {
     transition: 3s;
 }
-
 
  .container .card_container:nth-child(1) {
     transform: translateY(11rem);
