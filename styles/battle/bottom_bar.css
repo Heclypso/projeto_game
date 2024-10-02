@@ -1,17 +1,89 @@
 .bottom_bar {
-    width: 100vw;    height: 5vh;
-    background-color: rgb(53, 48, 48);
+    width: 100vw; 
+    height: 25vh;
     display: flex;
     justify-content: center;
     position: absolute;
     bottom: 0;
 }
 
-.main_container {
-    height: 20vh;
-    width: 30vw;
+.main__container {  
+    width: 42vw;
+    display: flex;
+    background-color: #D9D9D9;
+    justify-content: right;
+}
 
-    background-color: red;
+.main__container--hidden {
+    transform: translateY(18rem);
+}
+
+.main__container__cards {
+    background-color: rgb(95, 95, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26vw;
+}
+
+.main__container__cards .card_container:hover .card_display img {
+    display: block;
+}
+
+.main__container__button {
+    height: 6vh;
+    width: 8vw;
+    font-size: 18px;
+    color: white;
+    background-color: #565656;
+    border: none;
+}
+
+.main__container__button:hover {
+    transform: scale(1.1);
+    background-color: #616161;
+}
+
+
+.main__container__cards .card_title {
+    display: none;
+}
+
+.main__container__cards .card_green_hp {
+    background-color: #D9D9D9;
+}
+
+.main__container__cards .card_hp_points {
+    color: #e6e6e6;
+}
+
+.main__container__cards .card_container:nth-child(1) {
+    z-index: 0;
+    transform:  translateX(5rem) rotateZ(-10deg);
+}
+
+.main__container__cards .card_container:nth-child(2) {
+    z-index: 2;
+    transform: translateY(-1rem);
+}
+
+.main__container__cards .card_container:nth-child(3) {
+    z-index: 1;
+    transform: translateX(-5rem) rotateZ(10deg);
+}
+
+.main__container__cards .card_container:nth-child(1):hover {
+    transform: scale(1.1) translateY(-7rem) rotateZ(-10deg);
+    z-index: 4;
+}
+
+.main__container__cards .card_container:nth-child(2):hover {
+    transform: scale(1.1) translateY(-7rem);
+}
+
+.main__container__cards .card_container:nth-child(3):hover {
+    transform: scale(1.1) translateY(-7rem) rotateZ(10deg);
+    z-index: 4;
 }
 
 @media (max-width: 640px) {
