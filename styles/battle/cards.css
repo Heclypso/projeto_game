@@ -40,11 +40,11 @@
 }
 
  .container .card_container:nth-child(5) {
-    transform: translateY(-11rem);
+    transform: translateY(-9.5rem);
 }
 
  .container .card_container:nth-child(6) {
-    transform: translateY(-11rem);
+    transform: translateY(-9.5rem);
 }
 
 .container .card_container:nth-child(6) .card_display {
