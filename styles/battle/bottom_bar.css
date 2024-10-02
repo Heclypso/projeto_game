@@ -41,7 +41,9 @@
 
 .main__container__button:hover {
     transform: scale(1.1);
-    background-color: #616161;
+    font-weight: bold;
+    background-color: #ff8800;
+    transition: .5s;
 }
 
 
@@ -74,7 +76,7 @@
 
 .main__container__cards .card_container:nth-child(1):hover {
     transform: scale(1.1) translateY(-7rem) rotateZ(-10deg);
-    z-index: 4;
+    z-index: 3;
 }
 
 .main__container__cards .card_container:nth-child(2):hover {
@@ -83,7 +85,7 @@
 
 .main__container__cards .card_container:nth-child(3):hover {
     transform: scale(1.1) translateY(-7rem) rotateZ(10deg);
-    z-index: 4;
+    z-index: 3;
 }
 
 @media (max-width: 640px) {

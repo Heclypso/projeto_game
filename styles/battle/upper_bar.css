@@ -19,6 +19,27 @@
     height: 2rem;
 }
 
+.config_button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.help__button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.exit__battle__button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+}
+
 @media (max-width: 640px) {
     .upper__bar {
         width: 100%;
