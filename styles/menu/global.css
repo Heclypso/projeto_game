@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ABeeZee", system-ui;
+}
+
+body {
+    background-image: url("https://servidor-estatico-alpha-six.vercel.app/dfo_sirocco_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 10vw 0vw 0vw 10vw;
+    width: 30rem;
+}
