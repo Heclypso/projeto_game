@@ -3,7 +3,7 @@
     height: 5vh;
     display: flex;
     position: absolute;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .enemys__order {
