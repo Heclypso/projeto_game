@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 2fr;
     padding: 0px 40px 0px 0px;
+    min-width: 200px;
     background-color: #7a23cc;
     align-items: center;
     row-gap: 4.5rem;
@@ -15,6 +16,7 @@
 .left__field__second__column {
     display: grid;
     grid-template-columns: 1fr;
+    min-width: 200px;
     padding: 0px 0px 0px 40px;
     background-color: #7a23cc;
     align-items: center;
