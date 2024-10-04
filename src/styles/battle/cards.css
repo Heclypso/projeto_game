@@ -1,11 +1,13 @@
 .left__field {
     display: flex;
-    gap: 5rem;
+    gap: 0rem;
 }
 
 .left__field__first__column {
     display: grid;
     grid-template-columns: 2fr;
+    padding: 0px 40px 0px 0px;
+    background-color: #7a23cc;
     align-items: center;
     row-gap: 4.5rem;
 }
@@ -13,6 +15,8 @@
 .left__field__second__column {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0px 0px 0px 40px;
+    background-color: #7a23cc;
     align-items: center;
 }
 
