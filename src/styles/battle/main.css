@@ -8,8 +8,8 @@
 body {
     background-color: white;
     overflow: hidden;
-    /* background-image: url(https://servidor-estatico-alpha-six.vercel.app/dfo-background.jpeg);
-    background-size: cover; */
+    background-image: url(https://servidor-estatico-alpha-six.vercel.app/mapa_1.jpg);
+    background-size: 110%;
 }
 
 button {
