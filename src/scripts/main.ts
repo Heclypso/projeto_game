@@ -1,3 +1,46 @@
+// sistema de draggin
+
+const columns = document.querySelectorAll<HTMLElement>(".column"); 
+
+document.addEventListener("dragstart", (e: DragEvent) => {
+    const target = e.target as HTMLElement;
+    target.classList.add("dragging");
+});
+
+document.addEventListener("dragend", (e: DragEvent) => {
+    const target = e.target as HTMLElement; 
+    target.classList.remove("dragging");
+});
+
+columns.forEach((item) => {
+    item.addEventListener("dragover", (e: DragEvent) => {
+        e.preventDefault(); 
+
+        const dragging = document.querySelector<HTMLElement>(".dragging");
+        const applyAfter = getNewPosition(item, e.clientY);
+
+        if (applyAfter) {
+            applyAfter.insertAdjacentElement("afterend", dragging);
+        } else {
+            item.prepend(dragging);
+        }
+    });
+});
+
+function getNewPosition(column, posY) {
+    const cards = column.querySelectorAll("item:not(.dragging)");
+    let result;
+
+    for (let refer_card of cards) {
+        const box = refer_card.getBoundingClientRect();
+        const boxCenterY = box.top + box.height / 2;
+
+        if (posY >= boxCenterY) result = refer_card;
+    }
+
+    return result
+}
+
 // sistema de passagem de turnos
 
 let turnCounter: number = 1;
@@ -27,6 +70,5 @@ if (firstMonstersCamp.childElementCount + secondMonsterCamp.childElementCount > 
 } else {
     console.log("Não existem monstros no campo!");
 }
-
 
 //sistema de passagem de sala
