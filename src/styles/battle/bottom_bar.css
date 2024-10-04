@@ -14,6 +14,17 @@
     justify-content: right;
 }
 
+.main__container__counter {
+    height: 6vh;
+    width: 8vw;
+    padding: 1rem;
+    text-align: center;
+    background-color: #565656;
+    color: white;
+    font-size: 18px;
+  
+}
+
 .main__container--hidden {
     transform: translateY(18rem);
 }

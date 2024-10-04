@@ -1,2 +1,3 @@
-const actionBar = (document.getElementById('action-bar') as HTMLFormElement).reset();
+const turnCounter = (document.getElementById('turn__number') as HTMLFormElement).reset();
 const nextTurn = (document.getElementById('next__turn__button') as HTMLFormElement).reset();
+
