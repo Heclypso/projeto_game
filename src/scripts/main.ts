@@ -1,3 +1,13 @@
-const turnCounter = (document.getElementById('turn__number') as HTMLFormElement).reset();
-const nextTurn = (document.getElementById('next__turn__button') as HTMLFormElement).reset();
+let turnCounter: number = 1;
 
+const turnDisplay = document.getElementById('turn__number') as HTMLElement;
+const nextTurnButton = document.getElementById('end__turn__button') as HTMLButtonElement;
+
+if (turnDisplay && nextTurnButton) {
+ 
+    nextTurnButton.addEventListener('click', () => {
+ 
+        turnCounter += 1;
+        turnDisplay.textContent = turnCounter.toString();
+    });
+}
