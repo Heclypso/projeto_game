@@ -127,6 +127,10 @@
     display: block;
 }
 
+.main__container__cards .card_container:hover {
+    transform: translateY(-5rem);
+}
+
 .ui__button__container {
     width: 2vw;
 }
