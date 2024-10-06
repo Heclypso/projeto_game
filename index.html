@@ -11,17 +11,28 @@
 
     <link rel="stylesheet" href="src/styles/menu/main.css">
     <link rel="stylesheet" href="src/styles/menu/menu.css">
+    <link rel="stylesheet" href="src/styles/loading/loading.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="boss__tititle" alt="">Sirocco The Venomous Deity</h1>
-
-        <p class="boss__description">
-            Sirocco has a chance to inflict poison each hit, avoid long fights, his ultimate guarantees 
-            the poison hit and heals half of the lost life.
-        </p>
-
-        <a class="boss__battle__button" href="battle.html">Battle</a>
+    
+    <div id="load" class="loader">
+        <img src="src/loading_elements/Zamir.gif" alt="">
+        <p>Loading</p>
     </div>
+
+    <div id="main-content" class="main">
+        <div class="container">
+            <h1 class="boss__tititle" alt="">Sirocco The Venomous Deity</h1>
+    
+            <p class="boss__description">
+                Sirocco has a chance to inflict poison each hit, avoid long fights, his ultimate guarantees 
+                the poison hit and heals half of the lost life.
+            </p>
+    
+            <a class="boss__battle__button" href="battle.html">Battle</a>
+        </div>
+    </div>
+
+    <script src="build/loading.js"></script>
 </body>
 </html>

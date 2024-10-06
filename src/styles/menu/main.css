@@ -9,6 +9,7 @@ body {
     background-image: url("https://servidor-estatico-alpha-six.vercel.app/dfo_sirocco_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 0;
 }
 
 button {
@@ -18,4 +19,5 @@ button {
 .container {
     margin: 10vw 0vw 0vw 10vw;
     width: 30rem;
+    z-index: 0;
 }

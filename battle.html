@@ -15,15 +15,20 @@
     <!-- Styles -->
 
     <link rel="stylesheet" href="src/styles/battle/main.css">
+    <link rel="stylesheet" href="src/styles/loading/loading.css">
     <link rel="stylesheet" href="src/styles/battle/options.css">
     <link rel="stylesheet" href="src/styles/battle/main_characters.css">
     <link rel="stylesheet" href="src/styles/battle/cards.css">
-    <link rel="stylesheet" href="src/styles/battle/upper_bar.css">
     <link rel="stylesheet" href="src/styles/battle/bottom_bar.css">
     
 </head>
 
 <body>
+
+    <div id="load" class="loader">
+        <img src="src/loading_elements/Zamir.gif" alt="">
+        <p>Loading</p>
+    </div>
 
     <div id="options" class="black_background">
         <div class="options__container">
@@ -42,217 +47,220 @@
         </div>
     </div>
 
-   <div class="container">
+    <div id="main-content" class="main">
+        <div class="container">
 
-        <div class="left__field">
-            
-            <div class="left__field__first__column">
-    
-           
-                <img draggable="false" class="Neiser__base__form" draggable="false" src="src\main_characters\Neiser,_the_Black_Dragon.gif" alt="">
-              
-
-                <!-- <img draggable="false" class="Neiser__first__form" draggable="false" src="src\main_characters\Neiser_Ispins_Phase1.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Neiser__second__form" draggable="false" src="src\main_characters\Neiser_Ispins_Phase2.gif" alt=""> -->
-
-
-
-                <!-- <img draggable="false" class="Ash_Core__base__form" draggable="false" src="src\main_characters\Ash_Core,_the_Flame_Dragon.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Ash_Core__first__form" draggable="false" src="src\main_characters\Ash_Core_Ispins_Phase1.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Ash_Core__second__form" draggable="false" src="src\main_characters\Ash_Core_Ispins_Phase2.gif" alt=""> -->
-
-
-
-                <!-- <img draggable="false" class="Itrenok__base__form" draggable="false" src="src\main_characters\Itrenok,_the_Green_Dragon.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Itrenok__first__form" draggable="false" src="src\main_characters\Itrenok_Ispins_Phase1.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Itrenok__second__form" draggable="false" src="src\main_characters\Itrenok_Ispins_Phase2.gif" alt=""> -->
-
-
-
-
-                <!-- <img draggable="false" class="Numak__base__form" draggable="false" src="src\main_characters\Numak,_the_Gold_Dragon.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Numak__first__form" draggable="false" src="src\main_characters\Numak_Ispins_Phase1.gif" alt=""> -->
-
-                <!-- <img draggable="false" class="Numak__second__form" draggable="false" src="src\main_characters\Numak_Ispins_Phase2.gif" alt=""> -->
+            <div class="left__field">
                 
-            </div>
-
-            <div class="left__field__second__column column">
-
-            </div>
-        </div>
-
-        <div class="right__field">
-            <div id="first-column" class="right__field__first__column">
-                
-                <div draggable="false" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="right__field__second__column">
-                <div draggable="false" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="right__field__third__column">
-                <div draggable="false" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-   </div>
-
-    <div id="action-bar" class="bottom_bar">
-
-        <div class="main__container">
-
+                <div class="left__field__first__column">
         
-            <div class="character__display__container">
-                <img class="character__display__image" src="src\main_characters\Neiser-Face1.png" alt="">
-                <div class="character__display__name">Neiser</div>
+               
+                    <img draggable="false" class="Neiser__base__form" draggable="false" src="src\main_characters\Neiser,_the_Black_Dragon.gif" alt="">
+                  
+    
+                    <!-- <img draggable="false" class="Neiser__first__form" draggable="false" src="src\main_characters\Neiser_Ispins_Phase1.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Neiser__second__form" draggable="false" src="src\main_characters\Neiser_Ispins_Phase2.gif" alt=""> -->
+    
+    
+    
+                    <!-- <img draggable="false" class="Ash_Core__base__form" draggable="false" src="src\main_characters\Ash_Core,_the_Flame_Dragon.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Ash_Core__first__form" draggable="false" src="src\main_characters\Ash_Core_Ispins_Phase1.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Ash_Core__second__form" draggable="false" src="src\main_characters\Ash_Core_Ispins_Phase2.gif" alt=""> -->
+    
+    
+    
+                    <!-- <img draggable="false" class="Itrenok__base__form" draggable="false" src="src\main_characters\Itrenok,_the_Green_Dragon.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Itrenok__first__form" draggable="false" src="src\main_characters\Itrenok_Ispins_Phase1.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Itrenok__second__form" draggable="false" src="src\main_characters\Itrenok_Ispins_Phase2.gif" alt=""> -->
+    
+    
+    
+    
+                    <!-- <img draggable="false" class="Numak__base__form" draggable="false" src="src\main_characters\Numak,_the_Gold_Dragon.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Numak__first__form" draggable="false" src="src\main_characters\Numak_Ispins_Phase1.gif" alt=""> -->
+    
+                    <!-- <img draggable="false" class="Numak__second__form" draggable="false" src="src\main_characters\Numak_Ispins_Phase2.gif" alt=""> -->
+                    
+                </div>
+    
+                <div class="left__field__second__column column">
+    
+                </div>
             </div>
+    
+            <div class="right__field">
+                <div id="first-column" class="right__field__first__column">
+                    
+                    <div draggable="false" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+    
+                <div class="right__field__second__column">
+                    <div draggable="false" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="right__field__third__column">
+                    <div draggable="false" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+       </div>
+    
+        <div id="action-bar" class="bottom_bar">
+    
+            <div class="main__container">
+    
             
-            <div class="character__ui">
-                <div class="character_red_hp">
-                    <div class="character_green_hp">
-                        <div class="character_hp_points">
-                            10/10
-                        </div>
-                    </div>
+                <div class="character__display__container">
+                    <img class="character__display__image" src="src\main_characters\Neiser-Face1.png" alt="">
+                    <div class="character__display__name">Neiser</div>
                 </div>
-                <div class="character__mana__empty">
-                    <div class="character__mana__value">
-                        <div class="character__mana__points">
-                            10/10
-                        </div>
-                    </div>
-                </div>
-                <div class="character__options">
-                    <button id="draw-card-button">Draw</button>
-                    <button id="end-turn-button">End Turn</button>
-                    <button id="run">Run</button>
-                    <button id="open-options-button">Options</button>
-                </div>
-            </div>
-
-            <div draggable="false" id="container-cards" class="main__container__cards column">
-
-                <div draggable="true" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div draggable="true" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div draggable="true" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
-                        </div>
-                    </div>
-                </div>
-
                 
-                <div draggable="true" class="card_container">
-                    <div class="card_body">
-                        <div class="card_red_hp">
-                            <div class="card_green_hp">
-                                <div class="card_hp_points">
-                                    10/10
-                                </div>
+                <div class="character__ui">
+                    <div class="character_red_hp">
+                        <div class="character_green_hp">
+                            <div class="character_hp_points">
+                                10/10
                             </div>
                         </div>
-                        <div class="card_display">
-                            <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                    </div>
+                    <div class="character__mana__empty">
+                        <div class="character__mana__value">
+                            <div class="character__mana__points">
+                                10/10
+                            </div>
                         </div>
                     </div>
+                    <div class="character__options">
+                        <button id="draw-card-button">Draw</button>
+                        <button id="end-turn-button">End Turn</button>
+                        <button id="run">Run</button>
+                        <button id="open-options-button">Options</button>
+                    </div>
                 </div>
-
+    
+                <div draggable="false" id="container-cards" class="main__container__cards column">
+    
+                    <div draggable="true" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div draggable="true" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div draggable="true" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                    <div draggable="true" class="card_container">
+                        <div class="card_body">
+                            <div class="card_red_hp">
+                                <div class="card_green_hp">
+                                    <div class="card_hp_points">
+                                        10/10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_display">
+                                <img draggable="false" src="src\minions\Metal-Gear-Canaps-unscreen.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div id="container-cards-close-button" class="ui__button__container"><button class="main__container__cards__close__button"><img id="container-cards-icon" src="https://cdn-icons-png.flaticon.com/128/271/271228.png" alt=""></button></div>
+    
             </div>
-
-            <div id="container-cards-close-button" class="ui__button__container"><button class="main__container__cards__close__button"><img id="container-cards-icon" src="https://cdn-icons-png.flaticon.com/128/271/271228.png" alt=""></button></div>
-
+    
         </div>
-
     </div>
 
     <script src="build/main.js"></script>
+    <script src="build/loading.js"></script>
 </body>
 
 </html>

@@ -107,14 +107,13 @@ if (nextTurnButton) {
     });
 }
 // sistema de detecção de monstros
-var firstMonstersCamp = document.getElementById('first-column');
-var secondMonsterCamp = document.getElementById('second-column');
+// const firstMonstersCamp = document.getElementById('first-column') as HTMLElement;
+// const secondMonsterCamp = document.getElementById('second-column') as HTMLElement;
 // console.log('Monstros no primeiro campo:', firstMonstersCamp.childElementCount);
 // console.log('Monstros no segundo campo:', secondMonsterCamp.childElementCount);
-if (firstMonstersCamp.childElementCount + secondMonsterCamp.childElementCount > 0) {
-    console.log("Existem monstros no campo!");
-}
-else {
-    console.log("Não existem monstros no campo!");
-}
+// if (firstMonstersCamp.childElementCount + secondMonsterCamp.childElementCount > 0) {
+//     console.log("Existem monstros no campo!");
+// } else {
+//     console.log("Não existem monstros no campo!");
+// }
 //sistema de passagem de sala
