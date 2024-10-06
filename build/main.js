@@ -1,9 +1,22 @@
+// sistema de criar cartas na mão
+var cardFinalDestination = document.getElementById('container-cards');
+var drawCardButton = document.getElementById('draw-card-button');
+drawCardButton.addEventListener('click', function () {
+    if (cardFinalDestination.children.length < 4) {
+        console.log("dan daran dan daran dan DARAN");
+    }
+    else {
+        console.log("Limite de cartas atingido (3)");
+    }
+});
 // sistema de esconder as cartas da mão
 var containerCards = document.getElementById('container-cards');
 var closeButton = document.getElementById('container-cards-close-button');
 var containerCardsIcon = document.getElementById('container-cards-icon');
 closeButton.addEventListener('click', function () {
     var computedStyle = window.getComputedStyle(containerCards);
+    // sem o computedstyle o botao pode retornar uma string vazia 
+    // fazendo com que seja necessario dois clicks para o botao funcionar
     if (computedStyle.display === "none") {
         containerCardsIcon.style.rotate = "180deg";
         containerCards.style.display = "flex";
@@ -11,6 +24,31 @@ closeButton.addEventListener('click', function () {
     else {
         containerCardsIcon.style.rotate = "0deg";
         containerCards.style.display = "none";
+    }
+});
+// sistema de fuga da batalha 
+var runButton = document.getElementById('run');
+runButton.addEventListener('click', function () {
+    console.log("O jogador deixou o combate");
+});
+// sistema de abrir o menu de opções
+var openOptionsButton = document.getElementById('open-options-button');
+var closeOptionsButton = document.getElementById('close-options');
+var optionsMenu = document.getElementById('options');
+openOptionsButton.addEventListener('click', function () {
+    var computedStyle = window.getComputedStyle(optionsMenu);
+    // sem o computedstyle o botao pode retornar uma string vazia 
+    // fazendo com que seja necessario dois clicks para o botao funcionar
+    if (computedStyle.display === "none") {
+        optionsMenu.style.display = "block";
+    }
+});
+closeOptionsButton.addEventListener('click', function () {
+    var computedStyle = window.getComputedStyle(optionsMenu);
+    // sem o computedstyle o botao pode retornar uma string vazia 
+    // fazendo com que seja necessario dois clicks para o botao funcionar
+    if (computedStyle.display === "block") {
+        optionsMenu.style.display = "none";
     }
 });
 // sistema de draggin
@@ -52,10 +90,11 @@ function getNewPosition(column, posY) {
 var turnCounter = 1;
 var turnDisplay = document.getElementById('turn-number');
 var nextTurnButton = document.getElementById('end-turn-button');
-if (turnDisplay && nextTurnButton) {
+if (nextTurnButton) {
     nextTurnButton.addEventListener('click', function () {
-        turnCounter += 1;
-        turnDisplay.textContent = turnCounter.toString();
+        console.log("fim do turno");
+        // turnCounter += 1;
+        // turnDisplay.textContent = turnCounter.toString();
     });
 }
 // sistema de detecção de monstros

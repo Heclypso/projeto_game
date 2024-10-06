@@ -1,3 +1,18 @@
+// sistema de criar cartas na mão
+
+const cardFinalDestination = document.getElementById('container-cards') as HTMLElement;
+const drawCardButton = document.getElementById('draw-card-button') as HTMLElement;
+
+drawCardButton.addEventListener('click', () => {
+
+    if (cardFinalDestination.children.length < 4) {
+        console.log("dan daran dan daran dan DARAN")
+    } else {
+        console.log("Limite de cartas atingido (3)")
+    }
+
+});
+
 // sistema de esconder as cartas da mão
 
 const containerCards = document.getElementById('container-cards') as HTMLElement;
@@ -16,6 +31,41 @@ closeButton.addEventListener('click', () => {
         containerCards.style.display = "none";
     }
 });
+
+// sistema de fuga da batalha 
+
+const runButton = document.getElementById('run') as HTMLElement;
+
+runButton.addEventListener('click', () => {
+
+    console.log("O jogador deixou o combate")
+
+});
+
+// sistema de abrir o menu de opções
+
+const openOptionsButton = document.getElementById('open-options-button') as HTMLElement;
+const closeOptionsButton = document.getElementById('close-options') as HTMLElement;
+const optionsMenu = document.getElementById('options') as HTMLElement;
+
+openOptionsButton.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(optionsMenu); 
+    // sem o computedstyle o botao pode retornar uma string vazia 
+    // fazendo com que seja necessario dois clicks para o botao funcionar
+    if (computedStyle.display === "none") {
+        optionsMenu.style.display = "block";
+    } 
+});
+
+closeOptionsButton.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(optionsMenu); 
+    // sem o computedstyle o botao pode retornar uma string vazia 
+    // fazendo com que seja necessario dois clicks para o botao funcionar
+    if (computedStyle.display === "block") {
+        optionsMenu.style.display = "none";
+    } 
+});
+
 
 // sistema de draggin
 
@@ -67,12 +117,14 @@ let turnCounter: number = 1;
 const turnDisplay = document.getElementById('turn-number') as HTMLElement;
 const nextTurnButton = document.getElementById('end-turn-button') as HTMLButtonElement;
 
-if (turnDisplay && nextTurnButton) {
+if (nextTurnButton) {
  
     nextTurnButton.addEventListener('click', () => {
  
-        turnCounter += 1;
-        turnDisplay.textContent = turnCounter.toString();
+        console.log("fim do turno")
+
+        // turnCounter += 1;
+        // turnDisplay.textContent = turnCounter.toString();
     });
 }
 

@@ -105,10 +105,6 @@
     width: 40px;
 }
 
-.character__gif {
-    width: 40%;
-}
-
 .card_display img {
     width: 100%;
     display: none;
@@ -165,50 +161,5 @@
 }
 
 @media (max-width: 640px) {
-    .card_field {
-        margin: 2.5rem;
-        column-gap: 4rem;
-        row-gap: 2rem;
-    }
-
-    .card_container {
-        width: 100%;
-    }
-
-    .card_title {
-        padding: 4px;
-        width: 60%;
-        font-size: 8px;
-    }
-
-    .card_header {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .card_hp_points {
-        font-size: 15px;
-    }
-    
-
-    .card_header img {
-        width: 30px;
-    }
-
-    .card_footer_damage {
-        padding: 5px;
-        font-size: 12px;
-    }
-    
-    .card_footer_armor {
-        padding: 5px;
-        font-size: 12px;
-    }
-    
-    .card_description {
-        padding: 5px;
-        font-size: 10px;
-    }
-
 
 }
