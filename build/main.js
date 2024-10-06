@@ -27,9 +27,18 @@ closeButton.addEventListener('click', function () {
     }
 });
 // sistema de fuga da batalha 
+var leaveContainer = document.getElementById('leave-battle-container');
 var runButton = document.getElementById('run');
+var confirmRunButton = document.getElementById('exit-battle');
+var denyRunButton = document.getElementById('stay-in-battle');
 runButton.addEventListener('click', function () {
-    console.log("O jogador deixou o combate");
+    leaveContainer.style.display = "block";
+});
+confirmRunButton.addEventListener('click', function () {
+    console.log("voce deixou o combate");
+});
+denyRunButton.addEventListener('click', function () {
+    leaveContainer.style.display = "none";
 });
 // sistema de abrir o menu de opções
 var openOptionsButton = document.getElementById('open-options-button');

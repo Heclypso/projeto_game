@@ -34,14 +34,22 @@ closeButton.addEventListener('click', () => {
 
 // sistema de fuga da batalha 
 
+const leaveContainer = document.getElementById('leave-battle-container') as HTMLElement;
 const runButton = document.getElementById('run') as HTMLElement;
+const confirmRunButton = document.getElementById('exit-battle') as HTMLElement;
+const denyRunButton = document.getElementById('stay-in-battle') as HTMLElement;
 
 runButton.addEventListener('click', () => {
-
-    console.log("O jogador deixou o combate")
-
+    leaveContainer.style.display = "block";
 });
 
+confirmRunButton.addEventListener('click', () => {
+    console.log("voce deixou o combate")
+});
+
+denyRunButton.addEventListener('click', () => {
+    leaveContainer.style.display = "none";
+});
 // sistema de abrir o menu de opções
 
 const openOptionsButton = document.getElementById('open-options-button') as HTMLElement;
