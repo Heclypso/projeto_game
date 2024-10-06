@@ -1,5 +1,5 @@
 .left__field {
-    margin-left: 21vw;
+    margin-left: 22.5vw;
     display: flex;
     gap: 2rem;
 }
@@ -106,7 +106,7 @@
 }
 
 .character__gif {
-    width: 45%;
+    width: 40%;
 }
 
 .card_display img {
