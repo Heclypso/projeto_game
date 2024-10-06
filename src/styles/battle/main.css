@@ -10,6 +10,7 @@ body {
     overflow: hidden;
     background-image: url(https://servidor-estatico-alpha-six.vercel.app/mapa_1.jpg);
     background-size: 110%;
+    background-repeat: no-repeat;
 }
 
 button {
@@ -21,9 +22,11 @@ button img {
 }
 
 .container {
+    margin: 15vh 0vh 0vh 0vh;
+    height: 500px;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.75);
+    transform: scale(0.9);
 }
 
 @media (max-width: 640px) {

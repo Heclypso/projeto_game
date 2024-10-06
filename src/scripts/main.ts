@@ -1,3 +1,22 @@
+// sistema de esconder as cartas da mão
+
+const containerCards = document.getElementById('container-cards') as HTMLElement;
+const closeButton = document.getElementById('container-cards-close-button') as HTMLElement;
+const containerCardsIcon = document.getElementById('container-cards-icon') as HTMLElement;
+
+closeButton.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(containerCards); 
+    // sem o computedstyle o botao pode retornar uma string vazia 
+    // fazendo com que seja necessario dois clicks para o botao funcionar
+    if (computedStyle.display === "none") {
+        containerCardsIcon.style.rotate = "180deg";
+        containerCards.style.display = "flex";
+    } else {
+        containerCardsIcon.style.rotate = "0deg";
+        containerCards.style.display = "none";
+    }
+});
+
 // sistema de draggin
 
 const columns = document.querySelectorAll<HTMLElement>(".column"); 

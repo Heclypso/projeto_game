@@ -1,16 +1,31 @@
+// sistema de esconder as cartas da mão
+var containerCards = document.getElementById('container-cards');
+var closeButton = document.getElementById('container-cards-close-button');
+var containerCardsIcon = document.getElementById('container-cards-icon');
+closeButton.addEventListener('click', function () {
+    var computedStyle = window.getComputedStyle(containerCards);
+    if (computedStyle.display === "none") {
+        containerCardsIcon.style.rotate = "180deg";
+        containerCards.style.display = "flex";
+    }
+    else {
+        containerCardsIcon.style.rotate = "0deg";
+        containerCards.style.display = "none";
+    }
+});
 // sistema de draggin
-var columns = document.querySelectorAll(".column"); // Definindo o tipo como HTMLElement
+var columns = document.querySelectorAll(".column");
 document.addEventListener("dragstart", function (e) {
-    var target = e.target; // Fazendo cast para HTMLElement
+    var target = e.target;
     target.classList.add("dragging");
 });
 document.addEventListener("dragend", function (e) {
-    var target = e.target; // Fazendo cast para HTMLElement
+    var target = e.target;
     target.classList.remove("dragging");
 });
 columns.forEach(function (item) {
     item.addEventListener("dragover", function (e) {
-        e.preventDefault(); // Necessário para permitir o drop
+        e.preventDefault();
         var dragging = document.querySelector(".dragging");
         var applyAfter = getNewPosition(item, e.clientY);
         if (applyAfter) {
