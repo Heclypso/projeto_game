@@ -1,4 +1,5 @@
 .left__field {
+    margin-left: 21vw;
     display: flex;
     gap: 2rem;
 }
