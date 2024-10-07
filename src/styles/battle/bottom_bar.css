@@ -1,3 +1,22 @@
+:root {
+    --backgroundColor1: #EAEAEA;
+    --backgroundColor2: #7B30A7; 
+    --backgroundColor3: #d3d3d3;
+    --textColor1: #fff;
+
+    --redHpColor: #ff0000;
+    --greenHpColor: #23CC64;
+
+    --manaColor: #2394CC;
+    --emptyManaColor: #6D777C;
+
+    --buttonColor1: #3F3F3F;
+    --buttonHoverColor1: #927aaf;
+
+    --containerCardsBgColor: #a1a1a1;
+}
+
+
 .bottom_bar {
     width: 100vw; 
     height: 21vh;
@@ -12,19 +31,11 @@
     overflow: visible;
     height: 10rem;
     display: flex;
-    background-color: #494949;
     justify-content: right;
 }
 
-.character__title {
-    height: 2rem;
-    padding: 4px;
-    text-align: center;
-    background-color: #D9D9D9;
-    color: #030303;
-}
-
 .character__display__container {
+    background-color: var(--backgroundColor1);
     height: 20vw;
     width: 9.5vw;
 }
@@ -38,8 +49,8 @@
 .character__display__name {
     height: 1.7vw;
     width: 9.5vw;
-    background-color: #3C3C3C;
-    color: white;
+    background-color: var(--backgroundColor2);
+    color: var(--textColor1);
     font-size: 1.5rem;
     position: absolute;
     text-align: center;
@@ -49,36 +60,36 @@
 .character_red_hp {
     height: 1.5rem;
     z-index: 1;
-    background-color: red;
+    background-color: var(--redHpColor);
 }
 
 .character_green_hp {
     height: 100%;
     width: 100%;
     z-index: 2;
-    background-color: #23CC64;
+    background-color: var(--greenHpColor);
+}
+
+.character_hp_points {
+    padding-left: 4px;
+    z-index: 3;
+    color: var(--textColor1);
+    font-size: 1.2rem;
 }
 
 .character__ui {
     width: 19vw;
 }
 
-.character_hp_points {
-    padding-left: 4px;
-    z-index: 3;
-    color: white;
-    font-size: 1.2rem;
-}
-
 .character__mana__empty {
     height: 1.5rem;
-    background-color: #6D777C;
+    background-color: var(--emptyManaColor);
 }
 
 .character__mana__value {
     width: 100%;
     height: 100%;
-    background-color: #2394CC;
+    background-color: var(--manaColor);
 }
 
 .character__mana__points {
@@ -88,7 +99,7 @@
 }
 
 .character__options {
-    background-color: #504e4e;
+    background-color: var(--backgroundColor3);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -96,8 +107,8 @@
 }
 
 .character__options button {
-    background-color: #9244F1;
-    color: white;
+    background-color: var(--textColor1);
+    color: var(--buttonColor1);
     font-size: 26px;
     width: 100%;
     height: 2.9rem;
@@ -106,18 +117,31 @@
 }
 
 .character__options button:hover {
-    transform: scale(1.04);
-    background-color: #7c16f8;
+    background-color: var(--buttonHoverColor1);
 }
 
 .main__container__cards {
     transition: 0.8s;
-    background-color: #313131;
+    background-color: var(--containerCardsBgColor);
     display: none;
     justify-content: center;
     align-items: center;
     width: 26vw;
 }
+
+.close__container__cards__container {
+    width: 2vw;
+}
+
+
+.close__container__cards__container__button {
+    background-color: var(--backgroundColor1);
+    color: var(--textColor1);
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
 
 #container-cards-icon {
     transition: 1s;
@@ -129,30 +153,6 @@
 
 .main__container__cards .card_container:hover {
     transform: translateY(-5rem);
-}
-
-.ui__button__container {
-    width: 2vw;
-}
-
-.main__container__cards__close__button {
-    background-color: #424242;
-    color: white;
-    border: none;
-    height: 100%;
-    width: 100%;
-}
-
-.main__container__cards .card_title {
-    display: none;
-}
-
-.main__container__cards .card_green_hp {
-    background-color: #D9D9D9;
-}
-
-.main__container__cards .card_hp_points {
-    color: #e6e6e6;
 }
 
 
