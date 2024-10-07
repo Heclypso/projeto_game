@@ -1,8 +1,10 @@
 :root {
     --backgroundColor1: #EAEAEA;
-    --backgroundColor2: #7B30A7; 
+    --characterNameBgColor: #7B30A7; 
+    --largoNameBgColor: #0EBAC7;
     --backgroundColor3: #d3d3d3;
     --textColor1: #fff;
+    --textColor2: #3F3F3F;
 
     --redHpColor: #ff0000;
     --greenHpColor: #23CC64;
@@ -10,7 +12,7 @@
     --manaColor: #2394CC;
     --emptyManaColor: #6D777C;
 
-    --buttonColor1: #3F3F3F;
+    
     --buttonHoverColor1: #927aaf;
 
     --containerCardsBgColor: #a1a1a1;
@@ -46,10 +48,30 @@
     height: 30vh;
 }
 
+.largo__display__image {
+    position: absolute;
+    top: -130px;
+    left: -248px;
+    height: 30vh;
+}
+
 .character__display__name {
     height: 1.7vw;
     width: 9.5vw;
-    background-color: var(--backgroundColor2);
+    padding: .1rem;
+    background-color: var(--characterNameBgColor);
+    color: var(--textColor1);
+    font-size: 1.5rem;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+}
+
+.largo__display__name {
+    height: 1.7vw;
+    width: 9.5vw;
+    padding: .1rem;
+    background-color: var(--largoNameBgColor);
     color: var(--textColor1);
     font-size: 1.5rem;
     position: absolute;
@@ -108,7 +130,7 @@
 
 .character__options button {
     background-color: var(--textColor1);
-    color: var(--buttonColor1);
+    color: var(--textColor2);
     font-size: 26px;
     width: 100%;
     height: 2.9rem;
@@ -142,7 +164,6 @@
     width: 100%;
 }
 
-
 #container-cards-icon {
     transition: 1s;
 }
@@ -153,6 +174,33 @@
 
 .main__container__cards .card_container:hover {
     transform: translateY(-5rem);
+}
+
+.text_container {
+    background-color: var(--textColor1);
+    color: var(--buttonColor1);
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.text__container__button__container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.text_container button {
+    background-color: var(--textColor1);
+    color: #3F3F3F;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    margin-right: .5rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.text_container button:hover {
+    background-color: var(--buttonHoverColor1);
 }
 
 

@@ -94,8 +94,8 @@
                 </div>
             </div>
     
-            <div class="right__field">
-                <div id="first-column" class="right__field__first__column">
+            <div id="monster-field" class="right__field">
+                <div class="right__field__first__column">
                     
                     <div draggable="false" class="card_container">
                         <div class="card_body">
@@ -160,11 +160,17 @@
     
             
                 <div class="character__display__container">
-                    <img class="character__display__image" src="src\main_characters\Neiser-Face1.png" alt="">
-                    <div class="character__display__name">Neiser</div>
+                    <img id="character-image" class="character__display__image" src="src/main_characters/Neiser-Face1.png" alt="">
+
+                    <div id="character-name" class="character__display__name">Neiser</div>
+
+                    <img id="largo-image" class="largo__display__image" src="src/friend_character/Largo-NFace1.png" alt="">
+
+                    <div id="largo-name" class="largo__display__name">Largo</div>
+
                 </div>
                 
-                <div class="character__ui">
+                <div id="character-ui" class="character__ui">
                     <div class="character_red_hp">
                         <div class="character_green_hp">
                             <div class="character_hp_points">
@@ -254,6 +260,16 @@
     
                 <div id="container-cards-close-button" class="close__container__cards__container"><button class="close__container__cards__container__button"><img id="container-cards-icon" src="https://cdn-icons-png.flaticon.com/128/271/271228.png" alt=""></button></div>
     
+                <div id="text-container" class="text_container">
+
+                    <p id="text-container-p"></p>
+
+                    <div class="text__container__button__container">
+                        <button id="text-container-yes">Yes</button>
+                        <Button id="text-container-no">No</Button>
+                    </div>
+                </div>
+
             </div>
     
         </div>
@@ -261,6 +277,7 @@
 
     <script src="build/main.js"></script>
     <script src="build/loading.js"></script>
+    <script src="build/dialogue.js"></script>
 </body>
 
 </html>
