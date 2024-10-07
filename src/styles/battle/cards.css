@@ -148,6 +148,10 @@
     color: #272727;
 }
 
+.largo__base__form {
+    width: 8rem;
+}
+
 @keyframes ultimate {
 	0% {
 		background-position: 0% 50%;

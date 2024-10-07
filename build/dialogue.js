@@ -28,14 +28,19 @@ setTimeout(function () {
     LargoName.style.display = "block";
     characterImage.style.display = "none";
     characterName.style.display = "none";
-}, 5000);
+}, 2500);
 setTimeout(function () {
     dialogueText.textContent = "Hi, my friend, you are a mage... right? Can you help me open the path through the dungeon? You can keep the rewards";
     dialogueOptionYes.style.display = "block";
     dialogueOptionNo.style.display = "block";
-}, 5000);
+}, 2500);
 dialogueOptionYes.addEventListener('click', function () {
     console.log("eu disse sim");
+    monsterField.style.display = "flex";
+    battleUi.style.display = "block";
+    containerCardsUi.style.display = "flex";
+    closeContainerCardsButton.style.display = "block";
+    textContainer.style.display = "none";
 });
 dialogueOptionNo.addEventListener('click', function () {
     console.log("eu disse não");
