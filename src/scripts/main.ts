@@ -183,3 +183,10 @@ enemy.forEach((e) =>{
 });
 
 
+// sistema de receber drops 
+
+const claimButton = document.getElementById('victory-screen-claim-button') as HTMLElement;
+
+claimButton.addEventListener('click', () => {
+    console.log("itens recebidos")
+});

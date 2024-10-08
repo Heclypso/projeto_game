@@ -142,3 +142,8 @@ enemy.forEach(function (e) {
         });
     });
 });
+// sistema de receber drops 
+var claimButton = document.getElementById('victory-screen-claim-button');
+claimButton.addEventListener('click', function () {
+    victoryScreen.style.display = "none";
+});
