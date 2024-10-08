@@ -104,30 +104,22 @@ if (nextTurnButton) {
         console.log("fim do turno");
     });
 }
-// sistema de morte 
-var enemy = document.getElementById('enemy-body');
-var healthPoints = document.getElementById('enemy-hp-points');
-var endTurnButton = document.getElementById('end-turn-button');
-enemy.addEventListener('click', function () {
-    if (enemy.classList.contains('selected')) {
-        enemy.classList.remove('selected');
-    }
-    else {
-        enemy.classList.add('selected');
-    }
+// sistema de combate
+var enemy = document.querySelectorAll('.enemy');
+var emptyHpBar = document.querySelectorAll('.card_red_hp');
+var hpBar = document.querySelectorAll('.card_green_hp');
+var hpPoints = document.querySelectorAll('.card_hp_points');
+enemy.forEach(function (e) {
+    e.addEventListener('click', function () {
+        console.log("eu fui clicado");
+    });
 });
-endTurnButton.addEventListener('click', function () {
-    if (enemy.classList.contains('selected')) {
-        healthPoints.textContent = "0";
-        console.log("o inimigo foi morto");
-    }
+emptyHpBar.forEach(function () {
+    console.log("Barras de vida vazias");
 });
-var intervalTime = 500;
-setInterval(function () {
-    if (enemy) {
-        if (healthPoints.textContent === "0") {
-            enemy.style.width = "0";
-            healthPoints.style.display = "none";
-        }
-    }
-}, intervalTime);
+hpBar.forEach(function (e) {
+    e.style.display = 'block';
+});
+hpPoints.forEach(function (e) {
+    e.textContent = "oie";
+});

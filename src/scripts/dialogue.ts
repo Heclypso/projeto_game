@@ -8,13 +8,11 @@ const characterName = document.getElementById('character-name') as HTMLElement;
 const LargoImage = document.getElementById('largo-image') as HTMLElement;
 const LargoName = document.getElementById('largo-name') as HTMLElement;
 const battleUi = document.getElementById('character-ui') as HTMLElement;
-const containerCardsUi = document.getElementById('container-cards') as HTMLElement;
 const closeContainerCardsButton = document.getElementById('container-cards-close-button') as HTMLElement;
 
 monsterField.style.display = "none";
 textContainer.style.display = "block";
 battleUi.style.display = "none";
-containerCardsUi.style.display = "none";
 closeContainerCardsButton.style.display = "none";
 dialogueOptionYes.style.display = "none";
 dialogueOptionNo.style.display = "none";
@@ -42,13 +40,10 @@ setTimeout(() => {
     dialogueOptionNo.style.display = "block";
 }, 2500);
 
-
-
 dialogueOptionYes.addEventListener('click', () => {
     console.log("eu disse sim");
     monsterField.style.display = "flex";
     battleUi.style.display = "block";
-    containerCardsUi.style.display = "flex";
     closeContainerCardsButton.style.display = "block";
     textContainer.style.display = "none";
 })

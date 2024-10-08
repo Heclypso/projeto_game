@@ -50,7 +50,6 @@
 
 .selected {
     background-color: red;
-    transition: 0s;
 }
 
 .right__field .card_display {

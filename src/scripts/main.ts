@@ -134,36 +134,27 @@ if (nextTurnButton) {
     });
 }
 
-// sistema de morte dos inimigos
+// sistema de combate
 
-const enemy = document.getElementById('enemy-body') as HTMLElement; 
-const healthPoints = document.getElementById('enemy-hp-points') as HTMLElement;
-const endTurnButton = document.getElementById('end-turn-button') as HTMLElement;
+const enemy = document.querySelectorAll<HTMLElement>('.enemy');
+const emptyHpBar = document.querySelectorAll<HTMLElement>('.card_red_hp');
+const hpBar = document.querySelectorAll<HTMLElement>('.card_green_hp');
+const hpPoints = document.querySelectorAll<HTMLElement>('.card_hp_points');
 
-enemy.addEventListener('click', () =>{
-    if (enemy.classList.contains('selected')) {
-        enemy.classList.remove('selected');
-    } else {
-        enemy.classList.add('selected')
-    }
+enemy.forEach((e) =>{
+    e.addEventListener('click', ()=>{
+        console.log("eu fui clicado")
+    })
+});
+
+emptyHpBar.forEach(()=>{
+    console.log("Barras de vida vazias")
 })
 
-endTurnButton.addEventListener('click', () => {
-    if (enemy.classList.contains('selected')) {
-        healthPoints.textContent = "0"
-        console.log("o inimigo foi morto")
-    }
+hpBar.forEach((e) => {
+    e.style.display = 'block'; 
 })
 
-const intervalTime = 500;
-
-setInterval(() => {
-    if (enemy) {
-
-        if (healthPoints.textContent === "0") {
-            enemy.style.width = "0";
-            healthPoints.style.display = "none"
-        }
-    }
-}, intervalTime);
-
+hpPoints.forEach((e) => {
+    e.textContent = "oie"
+})
