@@ -30,7 +30,7 @@ closeButton.addEventListener('click', function () {
     }
 });
 // sistema de fuga da batalha 
-var leaveContainer = document.getElementById('leave-battle-container');
+var leaveContainer = document.getElementById('leave-battle-menu');
 var runButton = document.getElementById('run');
 var confirmRunButton = document.getElementById('exit-battle');
 var denyRunButton = document.getElementById('stay-in-battle');

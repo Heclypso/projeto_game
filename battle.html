@@ -16,11 +16,11 @@
 
     <link rel="stylesheet" href="src/styles/battle/main.css">
     <link rel="stylesheet" href="src/styles/loading/loading.css">
-    <link rel="stylesheet" href="src/styles/battle/options.css">
     <link rel="stylesheet" href="src/styles/battle/main_characters.css">
     <link rel="stylesheet" href="src/styles/battle/cards.css">
     <link rel="stylesheet" href="src/styles/battle/bottom_bar.css">
     <link rel="stylesheet" href="src/styles/battle/victory_screen.css">
+    <link rel="stylesheet" href="src/styles/battle/sub_menus.css">
     
 </head>
 
@@ -40,22 +40,29 @@
         </div>
     </div>
 
-    <div id="leave-battle-container" class="leave__battle__container black_background">
-        <p>Do you really want to leave combat? All your progress will be lost and you will have to restart from the beginning of the level.</p>
-        <div>
-            <a href="index.html" id="exit-battle">Run</a>
-            <button id="stay-in-battle">Stay</button>
+    <div id="leave-battle-menu" class="black_background">
+        <div class="leave__battle__container">
+            <p class="leave__battle__container__text">Do you really want to leave combat? All your progress
+            will be lost and you will have to restart from the beginning of the level.
+            </p>
+
+            <div class="leave__battle__container__options__container">
+                <a class="leave__battle__container__options__container__link" href="index.html" id="exit-battle">Run</a>
+                <button id="stay-in-battle" class="leave__battle__container__options__container__button">Stay</button>
+            </div>
         </div>
     </div>
 
-    <div id="won" class="victory__screen">
+    <div id="won" class="black_background">
         <h2 class="victory__screen__title">You Won</h2>
         <div class="victory__screen__drop__container">
             <div class="victory__screen__drop__item">
                 <img class="victory__screen__drop__item__image" src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
                 <p class="victory__screen__drop__item__name">Item</p>
             </div>
+            
         </div>
+        <button>claim</button>
     </div>
 
     <div id="main-content" class="main">

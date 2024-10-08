@@ -39,7 +39,7 @@ closeButton.addEventListener('click', () => {
 
 // sistema de fuga da batalha 
 
-const leaveContainer = document.getElementById('leave-battle-container') as HTMLElement;
+const leaveContainer = document.getElementById('leave-battle-menu') as HTMLElement;
 const runButton = document.getElementById('run') as HTMLElement;
 const confirmRunButton = document.getElementById('exit-battle') as HTMLElement;
 const denyRunButton = document.getElementById('stay-in-battle') as HTMLElement;
