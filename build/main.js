@@ -102,18 +102,32 @@ var nextTurnButton = document.getElementById('end-turn-button');
 if (nextTurnButton) {
     nextTurnButton.addEventListener('click', function () {
         console.log("fim do turno");
-        // turnCounter += 1;
-        // turnDisplay.textContent = turnCounter.toString();
     });
 }
-// sistema de detecção de monstros
-// const firstMonstersCamp = document.getElementById('first-column') as HTMLElement;
-// const secondMonsterCamp = document.getElementById('second-column') as HTMLElement;
-// console.log('Monstros no primeiro campo:', firstMonstersCamp.childElementCount);
-// console.log('Monstros no segundo campo:', secondMonsterCamp.childElementCount);
-// if (firstMonstersCamp.childElementCount + secondMonsterCamp.childElementCount > 0) {
-//     console.log("Existem monstros no campo!");
-// } else {
-//     console.log("Não existem monstros no campo!");
-// }
-//sistema de passagem de sala
+// sistema de morte 
+var enemy = document.getElementById('enemy-body');
+var healthPoints = document.getElementById('enemy-hp-points');
+var endTurnButton = document.getElementById('end-turn-button');
+enemy.addEventListener('click', function () {
+    if (enemy.classList.contains('selected')) {
+        enemy.classList.remove('selected');
+    }
+    else {
+        enemy.classList.add('selected');
+    }
+});
+endTurnButton.addEventListener('click', function () {
+    if (enemy.classList.contains('selected')) {
+        healthPoints.textContent = "0";
+        console.log("o inimigo foi morto");
+    }
+});
+var intervalTime = 500;
+setInterval(function () {
+    if (enemy) {
+        if (healthPoints.textContent === "0") {
+            enemy.style.width = "0";
+            healthPoints.style.display = "none";
+        }
+    }
+}, intervalTime);

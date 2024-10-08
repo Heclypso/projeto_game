@@ -45,6 +45,12 @@
 
 .card_container {
     width: 240px;
+    transition: 2s;
+}
+
+.selected {
+    background-color: red;
+    transition: 0s;
 }
 
 .right__field .card_display {

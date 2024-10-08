@@ -50,6 +50,7 @@ confirmRunButton.addEventListener('click', () => {
 denyRunButton.addEventListener('click', () => {
     leaveContainer.style.display = "none";
 });
+
 // sistema de abrir o menu de opções
 
 const openOptionsButton = document.getElementById('open-options-button') as HTMLElement;
@@ -73,7 +74,6 @@ closeOptionsButton.addEventListener('click', () => {
         optionsMenu.style.display = "none";
     } 
 });
-
 
 // sistema de draggin
 
@@ -131,23 +131,39 @@ if (nextTurnButton) {
  
         console.log("fim do turno")
 
-        // turnCounter += 1;
-        // turnDisplay.textContent = turnCounter.toString();
     });
 }
 
-// sistema de detecção de monstros
+// sistema de morte dos inimigos
 
-// const firstMonstersCamp = document.getElementById('first-column') as HTMLElement;
-// const secondMonsterCamp = document.getElementById('second-column') as HTMLElement;
+const enemy = document.getElementById('enemy-body') as HTMLElement; 
+const healthPoints = document.getElementById('enemy-hp-points') as HTMLElement;
+const endTurnButton = document.getElementById('end-turn-button') as HTMLElement;
 
-// console.log('Monstros no primeiro campo:', firstMonstersCamp.childElementCount);
-// console.log('Monstros no segundo campo:', secondMonsterCamp.childElementCount);
+enemy.addEventListener('click', () =>{
+    if (enemy.classList.contains('selected')) {
+        enemy.classList.remove('selected');
+    } else {
+        enemy.classList.add('selected')
+    }
+})
 
-// if (firstMonstersCamp.childElementCount + secondMonsterCamp.childElementCount > 0) {
-//     console.log("Existem monstros no campo!");
-// } else {
-//     console.log("Não existem monstros no campo!");
-// }
+endTurnButton.addEventListener('click', () => {
+    if (enemy.classList.contains('selected')) {
+        healthPoints.textContent = "0"
+        console.log("o inimigo foi morto")
+    }
+})
 
-//sistema de passagem de sala
+const intervalTime = 500;
+
+setInterval(() => {
+    if (enemy) {
+
+        if (healthPoints.textContent === "0") {
+            enemy.style.width = "0";
+            healthPoints.style.display = "none"
+        }
+    }
+}, intervalTime);
+
