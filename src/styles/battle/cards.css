@@ -7,7 +7,6 @@
 .left__field__first__column {
     display: grid;
     grid-template-columns: 1fr;
-    min-width: 200px;
     padding: 0px 0px 0px 40px;
     align-items: center;
 }
@@ -15,7 +14,6 @@
 .left__field__second__column {
     display: grid;
     grid-template-columns: 1fr;
-    min-width: 200px;
     padding: 0px 0px 0px 40px;  
     align-items: center;
 }
@@ -94,14 +92,6 @@
     color: white;
 }
 
-.card_header--ultimate {
-    background-color: #ffffff;
-    color: black;
-    background: linear-gradient(-45deg, #eeeb52, #bb0000, #ecfd00, #eb7d00);
-	background-size: 400% 400%;
-	animation: ultimate 15s ease infinite;
-}
-
 .card_header p {
     margin: 10px;
 }
@@ -119,31 +109,6 @@
     display: block;
 }
 
-.card_footer {
-    background-color: #414141;
-    display: flex;
-}
-
-.card_footer--ultimate {
-    background-color: #e6e6e6;
-}
-
-.card_footer_damage {
-    text-align: center;
-    color: white;
-    padding: 15px;
-    font-size: 1.1rem;
-    width: 50%;
-}
-
-.card_footer_armor {
-    text-align: center;
-    color: white;
-    padding: 15px;
-    font-size: 1.1rem;
-    width: 50%;
-}
-
 .card_description {
     padding: 15px;
     color: white;
@@ -157,18 +122,23 @@
     width: 8rem;
 }
 
-@keyframes ultimate {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .left__field {
+        margin-left: 10vw;
+        gap: 0rem;
+    }
 
-@media (max-width: 640px) {
+    .card_container {
+        width: 160px;
+        transition: 2s;
+    }
+
+    .card_hp_points {
+        font-size: 1rem;
+    }
+
+    .largo__base__form {
+        width: 6rem;
+    }
 
 }
