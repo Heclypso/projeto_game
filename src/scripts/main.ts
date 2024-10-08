@@ -5,8 +5,13 @@ const drawCardButton = document.getElementById('draw-card-button') as HTMLElemen
 
 drawCardButton.addEventListener('click', () => {
 
-    if (cardFinalDestination.children.length < 4) {
-        console.log("dan daran dan daran dan DARAN")
+    if (cardFinalDestination.children.length < 3) {
+       const newCard = document.createElement('div');
+
+       newCard.classList.add('card_container'); 
+       newCard.textContent = 'Nova Carta'; 
+
+       cardFinalDestination.appendChild(newCard);
     } else {
         console.log("Limite de cartas atingido (3)")
     }
@@ -118,18 +123,38 @@ function getNewPosition(column, posY) {
     return result
 }
 
+// sistema de vitoria
+
+const victoryScreen = document.getElementById('won') as HTMLElement;
+
 // sistema de passagem de turnos
 
-let turnCounter: number = 1;
-
-const turnDisplay = document.getElementById('turn-number') as HTMLElement;
+// let turnCounter: number = 1;
+// const turnDisplay = document.getElementById('turn-number') as HTMLElement;
 const nextTurnButton = document.getElementById('end-turn-button') as HTMLButtonElement;
 
 if (nextTurnButton) {
  
     nextTurnButton.addEventListener('click', () => {
  
-        console.log("fim do turno")
+        hpPoints.forEach((e) => {
+        
+            if (e.textContent === "0/10") {
+                enemy.forEach((e) =>{
+                    e.style.width = "0"
+                });
+        
+                emptyHpBar.forEach((e)=>{
+                    e.style.display = "none"
+                });
+            } else {
+                console.log("Turno finalizado, nenhum inimigo foi morto");
+            }
+
+            if (e.textContent === "0/10") {
+                victoryScreen.style.display = "block"
+                }
+        });
 
     });
 }
@@ -141,20 +166,20 @@ const emptyHpBar = document.querySelectorAll<HTMLElement>('.card_red_hp');
 const hpBar = document.querySelectorAll<HTMLElement>('.card_green_hp');
 const hpPoints = document.querySelectorAll<HTMLElement>('.card_hp_points');
 
+hpPoints.forEach((e) => {
+    e.textContent = "10/10"
+})
+
 enemy.forEach((e) =>{
     e.addEventListener('click', ()=>{
-        console.log("eu fui clicado")
+        hpPoints.forEach((e) => {
+            e.textContent = "0/10"
+        })
+        hpBar.forEach((e) => {
+            e.style.width = '0%'; 
+        })
+        
     })
 });
 
-emptyHpBar.forEach(()=>{
-    console.log("Barras de vida vazias")
-})
 
-hpBar.forEach((e) => {
-    e.style.display = 'block'; 
-})
-
-hpPoints.forEach((e) => {
-    e.textContent = "oie"
-})

@@ -7,7 +7,7 @@
 
 body {
     background-image: url("https://servidor-estatico-alpha-six.vercel.app/dfo_sirocco_bg.png");
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     z-index: 0;
 }

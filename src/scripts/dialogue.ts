@@ -32,13 +32,13 @@ setTimeout(()=> {
 
     characterImage.style.display = "none";
     characterName.style.display = "none";
-}, 2500);
+}, 3500);
 
 setTimeout(() => {
     dialogueText.textContent = "Hi, my friend, you are a mage... right? Can you help me open the path through the dungeon? You can keep the rewards";
     dialogueOptionYes.style.display = "block";
     dialogueOptionNo.style.display = "block";
-}, 2500);
+}, 3500);
 
 dialogueOptionYes.addEventListener('click', () => {
     console.log("eu disse sim");

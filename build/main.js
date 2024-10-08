@@ -2,8 +2,11 @@
 var cardFinalDestination = document.getElementById('container-cards');
 var drawCardButton = document.getElementById('draw-card-button');
 drawCardButton.addEventListener('click', function () {
-    if (cardFinalDestination.children.length < 4) {
-        console.log("dan daran dan daran dan DARAN");
+    if (cardFinalDestination.children.length < 3) {
+        var newCard = document.createElement('div');
+        newCard.classList.add('card_container');
+        newCard.textContent = 'Nova Carta';
+        cardFinalDestination.appendChild(newCard);
     }
     else {
         console.log("Limite de cartas atingido (3)");
@@ -95,13 +98,30 @@ function getNewPosition(column, posY) {
     }
     return result;
 }
+// sistema de vitoria
+var victoryScreen = document.getElementById('won');
 // sistema de passagem de turnos
-var turnCounter = 1;
-var turnDisplay = document.getElementById('turn-number');
+// let turnCounter: number = 1;
+// const turnDisplay = document.getElementById('turn-number') as HTMLElement;
 var nextTurnButton = document.getElementById('end-turn-button');
 if (nextTurnButton) {
     nextTurnButton.addEventListener('click', function () {
-        console.log("fim do turno");
+        hpPoints.forEach(function (e) {
+            if (e.textContent === "0/10") {
+                enemy.forEach(function (e) {
+                    e.style.width = "0";
+                });
+                emptyHpBar.forEach(function (e) {
+                    e.style.display = "none";
+                });
+            }
+            else {
+                console.log("Turno finalizado, nenhum inimigo foi morto");
+            }
+            if (e.textContent === "0/10") {
+                victoryScreen.style.display = "block";
+            }
+        });
     });
 }
 // sistema de combate
@@ -109,17 +129,16 @@ var enemy = document.querySelectorAll('.enemy');
 var emptyHpBar = document.querySelectorAll('.card_red_hp');
 var hpBar = document.querySelectorAll('.card_green_hp');
 var hpPoints = document.querySelectorAll('.card_hp_points');
+hpPoints.forEach(function (e) {
+    e.textContent = "10/10";
+});
 enemy.forEach(function (e) {
     e.addEventListener('click', function () {
-        console.log("eu fui clicado");
+        hpPoints.forEach(function (e) {
+            e.textContent = "0/10";
+        });
+        hpBar.forEach(function (e) {
+            e.style.width = '0%';
+        });
     });
-});
-emptyHpBar.forEach(function () {
-    console.log("Barras de vida vazias");
-});
-hpBar.forEach(function (e) {
-    e.style.display = 'block';
-});
-hpPoints.forEach(function (e) {
-    e.textContent = "oie";
 });

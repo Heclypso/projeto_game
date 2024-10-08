@@ -26,12 +26,12 @@ setTimeout(function () {
     LargoName.style.display = "block";
     characterImage.style.display = "none";
     characterName.style.display = "none";
-}, 2500);
+}, 3500);
 setTimeout(function () {
     dialogueText.textContent = "Hi, my friend, you are a mage... right? Can you help me open the path through the dungeon? You can keep the rewards";
     dialogueOptionYes.style.display = "block";
     dialogueOptionNo.style.display = "block";
-}, 2500);
+}, 3500);
 dialogueOptionYes.addEventListener('click', function () {
     console.log("eu disse sim");
     monsterField.style.display = "flex";
