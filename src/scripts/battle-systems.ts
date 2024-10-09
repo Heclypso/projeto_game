@@ -7,14 +7,10 @@ const EnemyHp = document.querySelectorAll<HTMLElement>('.card_hp_points');
 const characterHP = document.querySelectorAll<HTMLElement>('.character_hp_points');
 const characterMP = document.querySelectorAll<HTMLElement>('.character__mana__points');
 
-EnemyHp.forEach((e) => {
-    e.textContent = "10/10"
-})
-
 enemy.forEach((e) =>{
     e.addEventListener('click', ()=>{
         EnemyHp.forEach((e) => {
-            e.textContent = "0/10"
+            e.textContent = "0"
         })
         hpBar.forEach((e) => {
             e.style.width = '0%'; 
@@ -97,7 +93,7 @@ if (nextTurnButton) {
  
         EnemyHp.forEach((e) => {
         
-            if (e.textContent === "0/10") {
+            if (e.textContent === "0") {
                 enemy.forEach((e) =>{
                     e.style.width = "0"
                 });
@@ -109,7 +105,7 @@ if (nextTurnButton) {
                 console.log("Turno finalizado, nenhum inimigo foi morto");
             }
 
-            if (e.textContent === "0/10") {
+            if (e.textContent === "0") {
                 victoryScreen.style.display = "block"
                 }
         });

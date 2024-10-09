@@ -5,13 +5,10 @@ var hpBar = document.querySelectorAll('.card_green_hp');
 var EnemyHp = document.querySelectorAll('.card_hp_points');
 var characterHP = document.querySelectorAll('.character_hp_points');
 var characterMP = document.querySelectorAll('.character__mana__points');
-EnemyHp.forEach(function (e) {
-    e.textContent = "10/10";
-});
 enemy.forEach(function (e) {
     e.addEventListener('click', function () {
         EnemyHp.forEach(function (e) {
-            e.textContent = "0/10";
+            e.textContent = "0";
         });
         hpBar.forEach(function (e) {
             e.style.width = '0%';
@@ -62,7 +59,7 @@ var nextTurnButton = document.getElementById('end-turn-button');
 if (nextTurnButton) {
     nextTurnButton.addEventListener('click', function () {
         EnemyHp.forEach(function (e) {
-            if (e.textContent === "0/10") {
+            if (e.textContent === "0") {
                 enemy.forEach(function (e) {
                     e.style.width = "0";
                 });
@@ -73,7 +70,7 @@ if (nextTurnButton) {
             else {
                 console.log("Turno finalizado, nenhum inimigo foi morto");
             }
-            if (e.textContent === "0/10") {
+            if (e.textContent === "0") {
                 victoryScreen.style.display = "block";
             }
         });
