@@ -9,6 +9,9 @@ var llargoImage = document.getElementById('llargo-image');
 var llargoName = document.getElementById('llargo-name');
 var battleUi = document.getElementById('character-ui');
 var closeContainerCardsButton = document.getElementById('container-cards-close-button');
+var cutsceneLlargoGif = document.getElementById('cutscene-llargo');
+var battleLlargoGif = document.getElementById('battle-llargo');
+battleLlargoGif.style.display = "none";
 monsterField.style.display = "none";
 textContainer.style.display = "block";
 battleUi.style.display = "none";
@@ -38,6 +41,8 @@ dialogueOptionYes.addEventListener('click', function () {
     battleUi.style.display = "block";
     closeContainerCardsButton.style.display = "block";
     textContainer.style.display = "none";
+    battleLlargoGif.style.display = "block";
+    cutsceneLlargoGif.style.display = "none";
 });
 dialogueOptionNo.addEventListener('click', function () {
     console.log("eu disse não");

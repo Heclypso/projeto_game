@@ -27,7 +27,7 @@ enemy.forEach(function (e) {
 var allys = [
     {
         name: "Main Character",
-        health: 80,
+        health: 150,
         mana: 30,
         damage: 30,
     },
@@ -106,7 +106,6 @@ function reduceMana(index) {
         console.log("Mana insuficiente");
     }
 }
-// - 6.77
 function increaseMana(index) {
     if (allys[index].mana <= 20) {
         allys[index].mana = allys[index].mana + 10;

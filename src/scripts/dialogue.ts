@@ -9,7 +9,10 @@ const llargoImage = document.getElementById('llargo-image') as HTMLElement;
 const llargoName = document.getElementById('llargo-name') as HTMLElement;
 const battleUi = document.getElementById('character-ui') as HTMLElement;
 const closeContainerCardsButton = document.getElementById('container-cards-close-button') as HTMLElement;
+const cutsceneLlargoGif = document.getElementById('cutscene-llargo') as HTMLElement;
+const battleLlargoGif = document.getElementById('battle-llargo') as HTMLElement;
 
+battleLlargoGif.style.display = "none";
 monsterField.style.display = "none";
 textContainer.style.display = "block";
 battleUi.style.display = "none";
@@ -46,6 +49,8 @@ dialogueOptionYes.addEventListener('click', () => {
     battleUi.style.display = "block";
     closeContainerCardsButton.style.display = "block";
     textContainer.style.display = "none";
+    battleLlargoGif.style.display = "block"
+    cutsceneLlargoGif.style.display = "none"
 })
 
 dialogueOptionNo.addEventListener('click', ()=> {
