@@ -1,23 +1,3 @@
-// sistema de criar cartas na mão
-
-const cardFinalDestination = document.getElementById('container-cards') as HTMLElement;
-const drawCardButton = document.getElementById('draw-card-button') as HTMLElement;
-
-drawCardButton.addEventListener('click', () => {
-
-    if (cardFinalDestination.children.length < 3) {
-       const newCard = document.createElement('div');
-
-       newCard.classList.add('card_container'); 
-       newCard.textContent = 'Nova Carta'; 
-
-       cardFinalDestination.appendChild(newCard);
-    } else {
-        console.log("Limite de cartas atingido (3)")
-    }
-
-});
-
 // sistema de esconder as cartas da mão
 
 const containerCards = document.getElementById('container-cards') as HTMLElement;

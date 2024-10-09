@@ -1,17 +1,3 @@
-// sistema de criar cartas na mão
-var cardFinalDestination = document.getElementById('container-cards');
-var drawCardButton = document.getElementById('draw-card-button');
-drawCardButton.addEventListener('click', function () {
-    if (cardFinalDestination.children.length < 3) {
-        var newCard = document.createElement('div');
-        newCard.classList.add('card_container');
-        newCard.textContent = 'Nova Carta';
-        cardFinalDestination.appendChild(newCard);
-    }
-    else {
-        console.log("Limite de cartas atingido (3)");
-    }
-});
 // sistema de esconder as cartas da mão
 var containerCards = document.getElementById('container-cards');
 var closeButton = document.getElementById('container-cards-close-button');
