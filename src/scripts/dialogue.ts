@@ -11,6 +11,7 @@ const battleUi = document.getElementById('character-ui') as HTMLElement;
 const closeContainerCardsButton = document.getElementById('container-cards-close-button') as HTMLElement;
 const cutsceneLlargoGif = document.getElementById('cutscene-llargo') as HTMLElement;
 const battleLlargoGif = document.getElementById('battle-llargo') as HTMLElement;
+const llargoBanner = document.getElementById('llargo-banner') as HTMLElement;
 
 battleLlargoGif.style.display = "none";
 monsterField.style.display = "none";
@@ -44,7 +45,7 @@ setTimeout(() => {
 }, 3500);
 
 dialogueOptionYes.addEventListener('click', () => {
-    console.log("eu disse sim");
+    llargoBanner.style.display = "flex"
     monsterField.style.display = "flex";
     battleUi.style.display = "block";
     closeContainerCardsButton.style.display = "block";
@@ -61,4 +62,8 @@ dialogueOptionNo.addEventListener('click', ()=> {
     characterName.style.display = "block";
     dialogueText.textContent = "I wouldn't be able to finish the dungeon alone";
     dialogueOptionNo.style.display = "none";
+})
+
+llargoBanner.addEventListener('click', () => {
+    llargoBanner.style.display = "none"
 })

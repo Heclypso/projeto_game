@@ -11,6 +11,7 @@ var battleUi = document.getElementById('character-ui');
 var closeContainerCardsButton = document.getElementById('container-cards-close-button');
 var cutsceneLlargoGif = document.getElementById('cutscene-llargo');
 var battleLlargoGif = document.getElementById('battle-llargo');
+var llargoBanner = document.getElementById('llargo-banner');
 battleLlargoGif.style.display = "none";
 monsterField.style.display = "none";
 textContainer.style.display = "block";
@@ -36,7 +37,7 @@ setTimeout(function () {
     dialogueOptionNo.style.display = "block";
 }, 3500);
 dialogueOptionYes.addEventListener('click', function () {
-    console.log("eu disse sim");
+    llargoBanner.style.display = "flex";
     monsterField.style.display = "flex";
     battleUi.style.display = "block";
     closeContainerCardsButton.style.display = "block";
@@ -52,4 +53,7 @@ dialogueOptionNo.addEventListener('click', function () {
     characterName.style.display = "block";
     dialogueText.textContent = "I wouldn't be able to finish the dungeon alone";
     dialogueOptionNo.style.display = "none";
+});
+llargoBanner.addEventListener('click', function () {
+    llargoBanner.style.display = "none";
 });
