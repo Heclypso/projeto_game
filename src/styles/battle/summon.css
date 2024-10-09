@@ -37,9 +37,9 @@
 .llargo__banner__name__container {
     position: absolute;
     top: 40%;
-    margin-left: 6rem;
-    width: 30rem;
-    height: 8rem;
+    margin-left: 1.5rem;
+    width: 40rem;
+    height: 9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,12 +47,12 @@
 
 .llargo__name {
     color: white;
-    font-size: 3.5rem;
+    font-size: 5rem;
 }
 
 .llarg__title {
     color: white;
-    font-size: 3rem;
+    font-size: 4.5rem;
 }
 
 .llargo__img {
