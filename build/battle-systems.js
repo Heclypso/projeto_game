@@ -41,7 +41,7 @@ var allys = [
 var enemys = [
     {
         name: "Minion",
-        health: 100,
+        health: 80,
         damage: 50,
     },
 ];
@@ -76,6 +76,7 @@ function updateAllyHPBar() {
     var healthPercentage = (allys[0].health / maxHP) * 100;
     healthBar[0].style.width = "".concat(healthPercentage, "%");
 }
+// simulação de dano
 function reduceEnemyHP() {
     enemys[0].health -= 10;
     setEnemyHp(enemys[0], EnemyHp[0]);
@@ -83,6 +84,7 @@ function reduceEnemyHP() {
     setEnemyHp(enemys[0], EnemyHp[2]);
     updateEnemyHPBar();
 }
+// simulação de dano
 function reduceAllyHP() {
     allys[0].health -= 10;
     setAllyHp(allys[0], characterHP[0]);
@@ -113,6 +115,7 @@ function increaseMana(index) {
 }
 // sistema de vitoria
 var victoryScreen = document.getElementById('won');
+var loseScreen = document.getElementById('lose');
 // sistema de passagem de turnos
 var nextTurnButton = document.getElementById('end-turn-button');
 if (nextTurnButton) {
@@ -132,6 +135,11 @@ if (nextTurnButton) {
                 reduceEnemyHP();
                 increaseMana(0);
                 console.log("Turno finalizado, nenhum inimigo foi morto");
+            }
+        });
+        characterHP.forEach(function (e) {
+            if (e.textContent === "0") {
+                loseScreen.style.display = "block";
             }
         });
     });

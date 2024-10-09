@@ -16,6 +16,14 @@
     font-size: 5rem;
 }
 
+.lose__screen__title {
+    text-align: center;
+    width: 30vw;
+    background-color: #fff;
+    color: red;
+    font-size: 5rem;
+}
+
 .victory__screen__drop__container {
     background-color: #5f5f5f;
     display: grid;
@@ -48,6 +56,10 @@
     margin: 1rem;
 }
 
+.lose__screen__option__container {
+    display: flex;
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
 
     .victory__screen__container {
@@ -56,6 +68,11 @@
     }
     
     .victory__screen__title {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .lose__screen__title {
         width: 100%;
         font-size: 2rem;
     }

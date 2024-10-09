@@ -68,7 +68,7 @@
 
 .card_red_hp {
     z-index: 1;
-    background-color: red;
+    background-color: red; 
 }
 
 .card_green_hp {
@@ -79,10 +79,12 @@
 
 .card_hp_points {
     z-index: 3;
-    text-align: center;
     color: white;
     font-size: 25px;
+    margin-left: 6.7rem;
 }
+
+
 
 .card_header {
     padding: 10px;

@@ -21,7 +21,6 @@ const largoNAME = document.getElementById('llargo-name') as HTMLElement;
 
 llargoUI.style.display = "none";
 
-
 enemy.forEach((e) =>{
     e.addEventListener('click', ()=>{
         EnemyHp.forEach((e) => {
@@ -66,7 +65,7 @@ const allys: ally[] = [
 const enemys: enemy[] = [
     {
         name: "Minion",
-        health: 100,
+        health: 80,
         damage: 50,
     },
 ]
@@ -164,6 +163,7 @@ function increaseMana(index: number) {
 // sistema de vitoria
 
 const victoryScreen = document.getElementById('won') as HTMLElement;
+const loseScreen = document.getElementById('lose') as HTMLElement;
 
 // sistema de passagem de turnos
 
@@ -191,6 +191,13 @@ if (nextTurnButton) {
                 console.log("Turno finalizado, nenhum inimigo foi morto");
             }
         });
+
+        characterHP.forEach((e)=>{
+            if (e.textContent === "0") {
+                loseScreen.style.display = "block"
+            } 
+        })
+
 
     });
 }
