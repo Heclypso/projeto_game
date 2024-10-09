@@ -5,8 +5,8 @@ const dialogueOptionYes = document.getElementById('text-container-yes') as HTMLE
 const dialogueOptionNo = document.getElementById('text-container-no') as HTMLElement;
 const characterImage = document.getElementById('character-image') as HTMLElement;
 const characterName = document.getElementById('character-name') as HTMLElement;
-const LargoImage = document.getElementById('largo-image') as HTMLElement;
-const LargoName = document.getElementById('largo-name') as HTMLElement;
+const llargoImage = document.getElementById('llargo-image') as HTMLElement;
+const llargoName = document.getElementById('llargo-name') as HTMLElement;
 const battleUi = document.getElementById('character-ui') as HTMLElement;
 const closeContainerCardsButton = document.getElementById('container-cards-close-button') as HTMLElement;
 
@@ -16,19 +16,19 @@ battleUi.style.display = "none";
 closeContainerCardsButton.style.display = "none";
 dialogueOptionYes.style.display = "none";
 dialogueOptionNo.style.display = "none";
-LargoImage.style.display = "none";
-LargoName.style.display = "none";
+llargoImage.style.display = "none";
+llargoName.style.display = "none";
 
 // Inicio do diálogo
 
-LargoImage.style.display = "none";
-LargoName.style.display = "none";
+llargoImage.style.display = "none";
+llargoName.style.display = "none";
 
 dialogueText.textContent = "...?";
 
 setTimeout(()=> {
-    LargoImage.style.display = "block";
-    LargoName.style.display = "block";
+    llargoImage.style.display = "block";
+    llargoName.style.display = "block";
 
     characterImage.style.display = "none";
     characterName.style.display = "none";
@@ -50,8 +50,8 @@ dialogueOptionYes.addEventListener('click', () => {
 
 dialogueOptionNo.addEventListener('click', ()=> {
     console.log("eu disse não");
-    LargoImage.style.display = "none";
-    LargoName.style.display = "none";
+    llargoImage.style.display = "none";
+    llargoName.style.display = "none";
     characterImage.style.display = "block";
     characterName.style.display = "block";
     dialogueText.textContent = "I wouldn't be able to finish the dungeon alone";

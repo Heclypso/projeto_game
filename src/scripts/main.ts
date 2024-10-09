@@ -123,66 +123,6 @@ function getNewPosition(column, posY) {
     return result
 }
 
-// sistema de vitoria
-
-const victoryScreen = document.getElementById('won') as HTMLElement;
-
-// sistema de passagem de turnos
-
-// let turnCounter: number = 1;
-// const turnDisplay = document.getElementById('turn-number') as HTMLElement;
-const nextTurnButton = document.getElementById('end-turn-button') as HTMLButtonElement;
-
-if (nextTurnButton) {
- 
-    nextTurnButton.addEventListener('click', () => {
- 
-        hpPoints.forEach((e) => {
-        
-            if (e.textContent === "0/10") {
-                enemy.forEach((e) =>{
-                    e.style.width = "0"
-                });
-        
-                emptyHpBar.forEach((e)=>{
-                    e.style.display = "none"
-                });
-            } else {
-                console.log("Turno finalizado, nenhum inimigo foi morto");
-            }
-
-            if (e.textContent === "0/10") {
-                victoryScreen.style.display = "block"
-                }
-        });
-
-    });
-}
-
-// sistema de combate
-
-const enemy = document.querySelectorAll<HTMLElement>('.enemy');
-const emptyHpBar = document.querySelectorAll<HTMLElement>('.card_red_hp');
-const hpBar = document.querySelectorAll<HTMLElement>('.card_green_hp');
-const hpPoints = document.querySelectorAll<HTMLElement>('.card_hp_points');
-
-hpPoints.forEach((e) => {
-    e.textContent = "10/10"
-})
-
-enemy.forEach((e) =>{
-    e.addEventListener('click', ()=>{
-        hpPoints.forEach((e) => {
-            e.textContent = "0/10"
-        })
-        hpBar.forEach((e) => {
-            e.style.width = '0%'; 
-        })
-        
-    })
-});
-
-
 // sistema de receber drops 
 
 const claimButton = document.getElementById('victory-screen-claim-button') as HTMLElement;

@@ -5,8 +5,8 @@ var dialogueOptionYes = document.getElementById('text-container-yes');
 var dialogueOptionNo = document.getElementById('text-container-no');
 var characterImage = document.getElementById('character-image');
 var characterName = document.getElementById('character-name');
-var LargoImage = document.getElementById('largo-image');
-var LargoName = document.getElementById('largo-name');
+var llargoImage = document.getElementById('llargo-image');
+var llargoName = document.getElementById('llargo-name');
 var battleUi = document.getElementById('character-ui');
 var closeContainerCardsButton = document.getElementById('container-cards-close-button');
 monsterField.style.display = "none";
@@ -15,15 +15,15 @@ battleUi.style.display = "none";
 closeContainerCardsButton.style.display = "none";
 dialogueOptionYes.style.display = "none";
 dialogueOptionNo.style.display = "none";
-LargoImage.style.display = "none";
-LargoName.style.display = "none";
+llargoImage.style.display = "none";
+llargoName.style.display = "none";
 // Inicio do diálogo
-LargoImage.style.display = "none";
-LargoName.style.display = "none";
+llargoImage.style.display = "none";
+llargoName.style.display = "none";
 dialogueText.textContent = "...?";
 setTimeout(function () {
-    LargoImage.style.display = "block";
-    LargoName.style.display = "block";
+    llargoImage.style.display = "block";
+    llargoName.style.display = "block";
     characterImage.style.display = "none";
     characterName.style.display = "none";
 }, 3500);
@@ -41,8 +41,8 @@ dialogueOptionYes.addEventListener('click', function () {
 });
 dialogueOptionNo.addEventListener('click', function () {
     console.log("eu disse não");
-    LargoImage.style.display = "none";
-    LargoName.style.display = "none";
+    llargoImage.style.display = "none";
+    llargoName.style.display = "none";
     characterImage.style.display = "block";
     characterName.style.display = "block";
     dialogueText.textContent = "I wouldn't be able to finish the dungeon alone";

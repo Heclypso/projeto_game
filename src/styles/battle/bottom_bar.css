@@ -1,7 +1,7 @@
 :root {
     --backgroundColor1: #EAEAEA;
     --characterNameBgColor: #7B30A7; 
-    --largoNameBgColor: #0EBAC7;
+    --llargoNameBgColor: #0EBAC7;
     --backgroundColor3: #d3d3d3;
     --textColor1: #fff;
     --textColor2: #3F3F3F;
@@ -48,7 +48,7 @@
     height: 30vh;
 }
 
-.largo__display__image {
+.llargo__display__image {
     position: absolute;
     top: -130px;
     left: -248px;
@@ -67,11 +67,11 @@
     bottom: 0;
 }
 
-.largo__display__name {
+.llargo__display__name {
     height: 1.7vw;
     width: 9.5vw;
     padding: .1rem;
-    background-color: var(--largoNameBgColor);
+    background-color: var(--llargoNameBgColor);
     color: var(--textColor1);
     font-size: 1.5rem;
     position: absolute;
@@ -224,7 +224,7 @@
         height: 50vh;
     }
     
-    .largo__display__image {
+    .llargo__display__image {
         position: absolute;
         top: -5.9rem;
         left: -11rem;
@@ -237,7 +237,7 @@
         font-size: 1.3rem;
     }
     
-    .largo__display__name {
+    .llargo__display__name {
         height: 3vw;
         width: 15vw;
         font-size: 1.3rem;

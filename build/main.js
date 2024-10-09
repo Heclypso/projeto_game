@@ -98,52 +98,8 @@ function getNewPosition(column, posY) {
     }
     return result;
 }
-// sistema de vitoria
-var victoryScreen = document.getElementById('won');
-// sistema de passagem de turnos
-// let turnCounter: number = 1;
-// const turnDisplay = document.getElementById('turn-number') as HTMLElement;
-var nextTurnButton = document.getElementById('end-turn-button');
-if (nextTurnButton) {
-    nextTurnButton.addEventListener('click', function () {
-        hpPoints.forEach(function (e) {
-            if (e.textContent === "0/10") {
-                enemy.forEach(function (e) {
-                    e.style.width = "0";
-                });
-                emptyHpBar.forEach(function (e) {
-                    e.style.display = "none";
-                });
-            }
-            else {
-                console.log("Turno finalizado, nenhum inimigo foi morto");
-            }
-            if (e.textContent === "0/10") {
-                victoryScreen.style.display = "block";
-            }
-        });
-    });
-}
-// sistema de combate
-var enemy = document.querySelectorAll('.enemy');
-var emptyHpBar = document.querySelectorAll('.card_red_hp');
-var hpBar = document.querySelectorAll('.card_green_hp');
-var hpPoints = document.querySelectorAll('.card_hp_points');
-hpPoints.forEach(function (e) {
-    e.textContent = "10/10";
-});
-enemy.forEach(function (e) {
-    e.addEventListener('click', function () {
-        hpPoints.forEach(function (e) {
-            e.textContent = "0/10";
-        });
-        hpBar.forEach(function (e) {
-            e.style.width = '0%';
-        });
-    });
-});
 // sistema de receber drops 
 var claimButton = document.getElementById('victory-screen-claim-button');
 claimButton.addEventListener('click', function () {
-    victoryScreen.style.display = "none";
+    console.log("itens recebidos");
 });
