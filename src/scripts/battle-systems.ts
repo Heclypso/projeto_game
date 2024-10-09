@@ -47,7 +47,7 @@ type enemy = {
     damage: number;
 }
 
-const allys: ally[] = [
+let allys: ally[] = [
     {
         name: "Main Character",
         health: 150,
@@ -55,7 +55,7 @@ const allys: ally[] = [
         damage: 30,
     },
     {
-        name: "Largo",
+        name: "Llargo",
         health: 100,
         mana: 20,
         damage: 20,
@@ -146,21 +146,21 @@ function reduceMana(index: number) {
 
         setAllyMp(allys[index], characterMP[index]);
         updateManaBar(index);
+
+        
     } else {
         console.log("Mana insuficiente");
     }
 }
 
 function increaseMana(index: number) {
-    if (allys[index].mana < 30) {
-        allys[index].mana += 10;
-
-        setAllyMp(allys[index], characterMP[index]);
-        updateManaBar(index);
+    if (allys[index].mana <= 20) {
+        allys[index].mana = allys[index].mana + 10;
     }
+    setAllyMp(allys[index], characterMP[index]);
+        console.log(allys[index], characterMP[index]);
+        updateManaBar(index);
 }
-
-// sistema de vitoria
 
 const victoryScreen = document.getElementById('won') as HTMLElement;
 const loseScreen = document.getElementById('lose') as HTMLElement;
@@ -170,9 +170,8 @@ const loseScreen = document.getElementById('lose') as HTMLElement;
 const nextTurnButton = document.getElementById('end-turn-button') as HTMLButtonElement;
 
 if (nextTurnButton) {
- 
     nextTurnButton.addEventListener('click', () => {
- 
+
         EnemyHp.forEach((e) => {
         
             if (e.textContent === "0") {
@@ -184,13 +183,13 @@ if (nextTurnButton) {
                 emptyHpBar.forEach((e)=>{
                     e.style.display = "none"
                 });
-            } else {
-                reduceAllyHP()
-                reduceEnemyHP()
-                increaseMana(0)
-                console.log("Turno finalizado, nenhum inimigo foi morto");
             }
+
         });
+
+        reduceAllyHP()
+        reduceEnemyHP()
+        increaseMana(0)
 
         characterHP.forEach((e)=>{
             if (e.textContent === "0") {

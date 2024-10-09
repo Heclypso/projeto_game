@@ -27,12 +27,12 @@ enemy.forEach(function (e) {
 var allys = [
     {
         name: "Main Character",
-        health: 150,
+        health: 80,
         mana: 30,
         damage: 30,
     },
     {
-        name: "Largo",
+        name: "Llargo",
         health: 100,
         mana: 20,
         damage: 20,
@@ -106,14 +106,15 @@ function reduceMana(index) {
         console.log("Mana insuficiente");
     }
 }
+// - 6.77
 function increaseMana(index) {
-    if (allys[index].mana < 30) {
-        allys[index].mana += 10;
-        setAllyMp(allys[index], characterMP[index]);
-        updateManaBar(index);
+    if (allys[index].mana <= 20) {
+        allys[index].mana = allys[index].mana + 10;
     }
+    setAllyMp(allys[index], characterMP[index]);
+    console.log(allys[index], characterMP[index]);
+    updateManaBar(index);
 }
-// sistema de vitoria
 var victoryScreen = document.getElementById('won');
 var loseScreen = document.getElementById('lose');
 // sistema de passagem de turnos
@@ -130,13 +131,10 @@ if (nextTurnButton) {
                     e.style.display = "none";
                 });
             }
-            else {
-                reduceAllyHP();
-                reduceEnemyHP();
-                increaseMana(0);
-                console.log("Turno finalizado, nenhum inimigo foi morto");
-            }
         });
+        reduceAllyHP();
+        reduceEnemyHP();
+        increaseMana(0);
         characterHP.forEach(function (e) {
             if (e.textContent === "0") {
                 loseScreen.style.display = "block";
