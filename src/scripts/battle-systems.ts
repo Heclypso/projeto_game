@@ -112,6 +112,12 @@ function updateAllyHPBar() {
     healthBar[0].style.width = `${healthPercentage}%`;
 }
 
+// sistema de seleção aleatoria de alvo do ataque
+
+function targetRandomAlly() {
+    return allys[Math.floor(Math.random() * allys.length)];
+}
+
 // simulação de dano
 
 function reduceEnemyHP() {
@@ -122,8 +128,6 @@ function reduceEnemyHP() {
     setEnemyHp(enemys[0], EnemyHp[2]);
     updateEnemyHPBar();
 }
-
-// simulação de dano
 
 function reduceAllyHP() {
     allys[0].health -= 10
@@ -190,6 +194,7 @@ if (nextTurnButton) {
         reduceAllyHP()
         reduceEnemyHP()
         increaseMana(0)
+        targetRandomAlly()
 
         characterHP.forEach((e)=>{
             if (e.textContent === "0") {
