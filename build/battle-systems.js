@@ -76,6 +76,17 @@ function updateAllyHPBar() {
     var healthPercentage = (allys[0].health / maxHP) * 100;
     healthBar[0].style.width = "".concat(healthPercentage, "%");
 }
+// sistema de escolher o aliado que irá receber o ataque
+var attackTarget = allys[Math.floor(Math.random() * allys.length)];
+// sistema de movimentar o inimigo até o alvo do ataque
+function getAllyPosition() {
+}
+function getEnemyPosition() {
+}
+function allyAttack() {
+}
+function enemyAttack() {
+}
 // simulação de dano
 function reduceEnemyHP() {
     enemys[0].health -= 10;
@@ -134,6 +145,8 @@ if (nextTurnButton) {
         reduceAllyHP();
         reduceEnemyHP();
         increaseMana(0);
+        getBoundingEnemy();
+        getBoundingAlly();
         characterHP.forEach(function (e) {
             if (e.textContent === "0") {
                 loseScreen.style.display = "block";
@@ -147,6 +160,7 @@ var drawCardButton = document.getElementById('draw-card-button');
 drawCardButton.addEventListener('click', function () {
     if (cardFinalDestination.children.length < 3) {
         reduceMana(0);
+        moveAllyToEnemy();
         var newCard = document.createElement('div');
         newCard.classList.add('card_container');
         newCard.textContent = 'Nova Carta';
