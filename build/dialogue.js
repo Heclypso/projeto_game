@@ -12,6 +12,8 @@ var closeContainerCardsButton = document.getElementById('container-cards-close-b
 var cutsceneLlargoGif = document.getElementById('cutscene-llargo');
 var battleLlargoGif = document.getElementById('battle-llargo');
 var llargoBanner = document.getElementById('llargo-banner');
+var llargoBannerDescription = document.getElementById('llargo-banner-description');
+var llargoBannerBlackBackground = document.getElementById('llargo-banner-black-background');
 battleLlargoGif.style.display = "none";
 monsterField.style.display = "none";
 textContainer.style.display = "block";
@@ -55,5 +57,11 @@ dialogueOptionNo.addEventListener('click', function () {
     dialogueOptionNo.style.display = "none";
 });
 llargoBanner.addEventListener('click', function () {
-    llargoBanner.style.display = "none";
+    llargoBannerDescription.style.display = "flex";
+    llargoBannerBlackBackground.style.display = "block";
+    llargoBannerDescription.addEventListener('click', function () {
+        llargoBannerDescription.style.display = "none";
+        llargoBannerBlackBackground.style.display = "none";
+        llargoBanner.style.display = "none";
+    });
 });

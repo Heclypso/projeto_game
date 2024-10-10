@@ -12,6 +12,8 @@ const closeContainerCardsButton = document.getElementById('container-cards-close
 const cutsceneLlargoGif = document.getElementById('cutscene-llargo') as HTMLElement;
 const battleLlargoGif = document.getElementById('battle-llargo') as HTMLElement;
 const llargoBanner = document.getElementById('llargo-banner') as HTMLElement;
+const llargoBannerDescription = document.getElementById('llargo-banner-description') as HTMLElement;
+const llargoBannerBlackBackground = document.getElementById('llargo-banner-black-background') as HTMLElement;
 
 battleLlargoGif.style.display = "none";
 monsterField.style.display = "none";
@@ -65,5 +67,12 @@ dialogueOptionNo.addEventListener('click', ()=> {
 })
 
 llargoBanner.addEventListener('click', () => {
-    llargoBanner.style.display = "none"
+    llargoBannerDescription.style.display = "flex"
+    llargoBannerBlackBackground.style.display = "block"
+
+    llargoBannerDescription.addEventListener('click', () => {
+        llargoBannerDescription.style.display = "none"
+        llargoBannerBlackBackground.style.display = "none"
+        llargoBanner.style.display = "none";
+    });  
 })

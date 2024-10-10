@@ -73,3 +73,29 @@
     background-color: #fff;
     border: none;
 }
+
+.llargo__description__container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 35vh;
+    width: 100vw;
+    height: 22vh;
+    background-color: #fff;
+    display: none;
+}
+
+.llargo__description {
+    font-size: 1.6rem;
+    width: 26rem;
+    color: #3F3F3F;
+}
+
+.llargo__description__text__colored {
+    color: #47D99F;
+}
+
+.llargo__description__text__colored:hover {
+    color: red;
+}
